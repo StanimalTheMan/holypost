@@ -1,0 +1,7 @@
+{% block content %}
+
+{% for post in posts %}
+    <img src="{{ post.image }}" alt="{{ post.title }}">
+{% endfor %}
+
+{% endblock content %}
