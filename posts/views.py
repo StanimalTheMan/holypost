@@ -13,7 +13,7 @@ def handle_photo_submission(request):
                 post = form.save(commit=False)
                 post.moderated = True
                 post.save()
-                return redirect('submission_success')
+                return redirect('posts/photo-submission-success.html')
             else:
                 return render(request, 'error.html', {'message': 'Inappropriate content detected'})
     else:
