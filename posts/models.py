@@ -8,6 +8,7 @@ class Post(models.Model):
     description = models.TextField()
     moderated = models.BooleanField(default=False)
     timestamp = models.DateTimeField(auto_now_add=True)
+    image_s3_key = models.CharField(max_length=255)
 
     def __str__(self):
         return f'Post {self.id}'
